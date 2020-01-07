@@ -1,3 +1,4 @@
+import time
 
 def sumOfSquares(maxNum):
     sum = 0
@@ -7,15 +8,9 @@ def sumOfSquares(maxNum):
 
 def sumUpToNumber(num):
     if(num % 2 == 0):
-        #print("even")
         sum = (num + 1) * (num // 2)
-        #print(sum)
     else:
-        # print("odd")
-        # print(((num + 1) * (num // 2)))
-        # print(((num+1)//2))
         sum = ((num + 1) * (num // 2)) + ((num+1)//2)
-        # print(sum)
     return sum
 
 
@@ -27,7 +22,9 @@ def difference(maxNum):
     return squareOfSums(maxNum) - sumOfSquares(maxNum)
 
 def main():
-    #sumUpToNumber(6)
+    start = time.time()
     print(difference(100))
+    end = time.time()
+    print("Calculating this took: " + str(end-start) + " seconds")
 
 main()
