@@ -23,7 +23,7 @@ def difference(maxNum):
 
 def main():
     start = time.time()
-    print(difference(100))
+    print("The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is: " + str(difference(100)))
     end = time.time()
     print("Calculating this took: " + str(end-start) + " seconds")
 
